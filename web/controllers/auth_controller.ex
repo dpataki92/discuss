@@ -9,6 +9,4 @@ defmodule Discuss.AuthController do
     IO.inspect(params)
     IO.puts("++++++")
   end
-
-
 end
