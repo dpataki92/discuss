@@ -15,12 +15,12 @@ defmodule Discuss.AuthController do
     case insert_or_update_user(changeset) do
       {:ok, user} ->
         conn
-        |> put_flash(:info, "Weclome back!")
+        |> put_flash(:info, "Welcome back!")
         |> put_session(:user_id, user.id)
         |> redirect(to: topic_path(conn, :index))
       {:error, _reason} ->
         conn
-        |> put_flash(:error, "Error signng in")
+        |> put_flash(:error, "Error signing in")
         |> redirect(to: topic_path(conn, :index))
     end
   end
